@@ -3,7 +3,6 @@ const path = require('path');
 const { generateAssetsLink } = require('./config');
 // Get current directory
 const currentDir = path.resolve('.');
-console.log(currentDir);
 const baseURL = 'https://aniketchanana.github.io/public-assets';
 
 const getAllFiles = function (dirPath, arrayOfFiles) {
