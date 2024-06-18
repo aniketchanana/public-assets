@@ -21,7 +21,7 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
 
 // Function to create README file
 const createReadme = function (files) {
-  const readmeContent = `# Directory Listing\n\n## Files\n\n${files
+  const readmeContent = `## Files\n\n${files
     .map((file) => `- ${file}`)
     .join('\n')}`;
 

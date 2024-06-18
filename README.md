@@ -1,5 +1,3 @@
-# Directory Listing
-
 ## Files
 
 - /Users/aniket/Desktop/public-assets/yogasthah/css/styles.css
