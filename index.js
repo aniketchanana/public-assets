@@ -4,6 +4,8 @@ const { generateAssetsLink } = require('./config');
 // Get current directory
 const currentDir = path.resolve('.');
 console.log(currentDir);
+const baseURL = 'https://aniketchanana.github.io/public-assets';
+
 const getAllFiles = function (dirPath, arrayOfFiles) {
   const files = fs.readdirSync(dirPath);
   arrayOfFiles = arrayOfFiles || [];
@@ -12,7 +14,9 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
     if (fs.statSync(dirPath + '/' + file).isDirectory()) {
       arrayOfFiles = getAllFiles(dirPath + '/' + file, arrayOfFiles);
     } else {
-      arrayOfFiles.push(path.join(dirPath, '/', file));
+      arrayOfFiles.push(
+        path.join(dirPath, '/', file).replace(currentDir, baseURL)
+      );
     }
   });
 
